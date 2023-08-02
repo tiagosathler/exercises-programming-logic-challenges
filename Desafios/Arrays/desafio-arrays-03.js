@@ -18,7 +18,15 @@ Caso o contrário:
 
 function findGuest(names, guest){
   // Desenvolva seu código nessa função
-  return // Retorne o resultado aqui
+  const positiveAnswer = "O nome está na lista.";
+  const negativeAnswer = "O nome não está na lista.";
+  // return names.includes(guest) ? positiveAnswer : negativeAnswer;
+  for (const name of names) {
+    if (name === guest) {
+      return positiveAnswer;
+    }
+  }
+  return negativeAnswer;
 }
 
 module.exports = findGuest;
