@@ -19,7 +19,18 @@ O retorno deve ser no seguinte formato:
 */
 
 function getOldPerson(arrPeople) {
-  // Desenvolva seu código nessa função
+  // arrPeople.sort((p1, p2) => p2.age - p1.age);
+  // const { name, age } = arrPeople[0];
+  let { age, name } = arrPeople[0];
+
+  arrPeople.forEach((p) => {
+    if (p.age > age) {
+      age = p.age;
+      name = p.name;
+    };
+  });
+
+  return `${name} tem a maior idade com ${age} anos.`;
 }
 
 module.exports = getOldPerson;
