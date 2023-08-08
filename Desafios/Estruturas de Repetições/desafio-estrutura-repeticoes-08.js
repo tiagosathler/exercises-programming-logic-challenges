@@ -11,8 +11,22 @@ x, y, z ...n.
 
 */
 
-function sortDec(){
-  // Desenvolva seu código nessa função
+function sortDec() {
+  const upperBound = 200;
+  const lowerBound = 100;
+
+  let response = "";
+
+  for (let i = upperBound; i >= lowerBound; i--) {
+    response += `${i}`;
+    if (i > lowerBound) {
+      response += ", ";
+    } else {
+      response += ".";
+    }
+  }
+
+  return response;
 }
 
 module.exports = sortDec;

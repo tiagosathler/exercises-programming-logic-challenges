@@ -16,7 +16,17 @@ Saída:
 */
 
 function repeatName(name, quantity) {
-  // Desenvolva seu código nessa função
+  let response = "";
+
+  for (let i = 1; i <= quantity; i++) {
+    if (i < quantity) {
+      response += name + ", ";
+    } else {
+      response += name + ".";
+    }
+  }
+
+  return response;
 }
 
 module.exports = repeatName;

@@ -11,9 +11,17 @@ Caso não encontre o elemento, retorne:
 
 */
 
-function findIndexOf(array, element){
-  // Desenvolva seu código nessa função
+function findIndexOf(array, element) {
+  let position;
+
+  for (index in array) {
+    if (array[index] === element) {
+      position = index;
+      break;
+    }
+  }
+
+  return position ? Number(position) : "Elemento Não encontrado no array.";
 }
 
 module.exports = findIndexOf;
-
