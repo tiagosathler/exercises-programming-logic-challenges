@@ -46,7 +46,40 @@ Desafio: faça sem usar estruturas condicionais (ifs ou switches).
 */
 
 function fantasyGame3(className, level) {
-  // Desenvolva seu código nessa função
+  const personagens = {
+    Mago: {
+      initialLifePoints: 5,
+      lifePointsPerLevel: 2,
+      equipment: "Varinha",
+    },
+    Arqueiro: {
+      initialLifePoints: 10,
+      lifePointsPerLevel: 3,
+      equipment: "Arco Curto",
+    },
+    Guerreiro: {
+      initialLifePoints: 15,
+      lifePointsPerLevel: 4,
+      equipment: "Espada",
+    },
+    Cavaleiro: {
+      initialLifePoints: 20,
+      lifePointsPerLevel: 5,
+      equipment: "Armadura Completa",
+    },
+  };
+
+  const {
+    initialLifePoints,
+    lifePointsPerLevel,
+    equipment,
+  } = personagens[className];
+
+  return (
+    `${className}, nível ${level}: ` +
+    `${initialLifePoints + (level - 1) * lifePointsPerLevel}PV, ` +
+    `${equipment}.`
+  );
 }
 
 module.exports = fantasyGame3;

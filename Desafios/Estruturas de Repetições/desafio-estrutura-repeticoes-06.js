@@ -13,8 +13,23 @@ Use a seguinte estrutura no retorno:
 
 */
 
-function oddNumbers(){
-  // Desenvolva seu código nessa função
+function oddNumbers() {
+  let response = "";
+  const limit = 50;
+
+  for (let i = 1; i <= limit; i++) {
+    if (i % 2) {
+      response += `${i}`;
+
+      if (i + 1 < limit) {
+        response += ", ";
+      } else {
+        response += ".";
+      }
+    }
+  }
+
+  return response;
 }
 
 module.exports = oddNumbers;

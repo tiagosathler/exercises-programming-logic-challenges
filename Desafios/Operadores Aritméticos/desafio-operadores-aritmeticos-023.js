@@ -12,7 +12,13 @@ Retorne a quantidade de vezes que o número foi dividido no formato:
 */
 
 function successiveDivisions(number) {
-  // Desenvolva seu código nessa função
+  let division = number;
+  let count = 0;
+  while (division >= 1) {
+    division /= 2;
+    count++;
+  }
+  return `Quantidade total de divisões: ${count}`;
 }
 
 module.exports = successiveDivisions;

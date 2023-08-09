@@ -10,8 +10,8 @@ Escreva um algoritmo que recebe 3 valores, calcule e retorne o valor da média n
 
 */
 
-function average(number1, number2, number3){
-  // Desenvolva seu código nessa função
+function average(number1, number2, number3) {
+  return `O Valor médio é: ${(number1 + number2 + number3) / 3}`;
 }
 
 module.exports = average;

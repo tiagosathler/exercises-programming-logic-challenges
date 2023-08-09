@@ -5,7 +5,7 @@ const {
   usaFilter,
   rockFilter,
   highestRatingFilter,
-} = require("../Desafios/Destructuring e Hofs/");
+} = require("../Desafios/Destructuring e HOFs/");
 
 describe("Desafios de Destructuring e HOFs.", () => {
   describe("01 - Testando a Função getBandsInformation.", () => {

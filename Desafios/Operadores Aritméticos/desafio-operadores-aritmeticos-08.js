@@ -9,8 +9,9 @@ Obs2: Dependendo do método usado para arredondar o tipo da sua variável, o val
 
 */
 
-function restaurantExpenses(account){
-  // Desenvolva seu código nessa função
+function restaurantExpenses(account) {
+  const value = account * 1.1 * 1.05;
+  return Number(value.toFixed(2));
 }
 
 module.exports = restaurantExpenses;

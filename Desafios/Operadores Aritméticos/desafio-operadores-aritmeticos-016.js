@@ -8,8 +8,9 @@ Obs: O retorne deve ser do tipo boolean.
 
 */
 
-function randomBoolean(){
-  // Desenvolva seu código nessa função
+function randomBoolean() {
+  const number = Math.floor(Math.random() * 2);
+  return number === 1;
 }
 
 module.exports = randomBoolean;

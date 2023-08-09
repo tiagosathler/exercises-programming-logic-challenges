@@ -16,7 +16,9 @@ Obs: O valor do prato tem que ter duas casas decimais após a virgula.
 */
 
 function weightAndValue(priceKg, plateWeight) {
-  // Desenvolva seu código nessa função
+  const value = priceKg * plateWeight / 1000;
+  const valueInString = value.toFixed(2).replace(".", ",");
+  return `O prato de ${plateWeight} gramas custa: R$ ${valueInString}`;
 }
 
 module.exports = weightAndValue;

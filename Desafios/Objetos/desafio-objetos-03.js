@@ -23,7 +23,16 @@ Desafio: faça sem usar estruturas condicionais (ifs ou switches).
 */
 
 function musicalScale(note) {
-  // Desenvolva seu código nessa função
+  const escala = {
+    Dó: "I",
+    Ré: "II",
+    Mi: "III",
+    Fá: "IV",
+    Sol: "V",
+    Lá: "VI",
+    Si: "VII",
+  };
+  return escala[note];
 }
 
 module.exports = musicalScale;

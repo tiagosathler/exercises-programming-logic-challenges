@@ -116,9 +116,9 @@ describe("Desafios de Operadores Aritméticos.", () => {
   describe(" 06 - Testando a Função IMC.", () => {
     const height = +`1.${getRandomInt(40, 99)}`
     const weight = getRandomInt(40, 120);
-    const imc =  (height * height) / weight;
-    it("Ao passar os argumentos 70 e 1.8 , deve retornar: 0.04628571428571429", () => {
-      expect(IMC(70, 1.8)).toBe(0.04628571428571429);
+    const imc =  weight / (height * height);
+    it("Ao passar os argumentos 70 e 1.8 , deve retornar: 21.604938271604937", () => {
+      expect(IMC(70, 1.8)).toBe(21.604938271604937);
     });
     it(`Ao passar os argumentos ${weight} e ${height}, deve retornar: ${imc}`, () => {
       expect(IMC(weight, height)).toBe(imc);
@@ -157,13 +157,13 @@ describe("Desafios de Operadores Aritméticos.", () => {
 
 
   describe(" 11 - Testando a Função paymentOptions.", () => {
-    it("Se o preço do produto for 10, deve retornar 'À Vista: R$9 ou 4x de: R$2.88'", () => {
-      const expected = 'À Vista: R$9 ou 4x de: R$2.88';
+    it("Se o preço do produto for 10, deve retornar 'À Vista: R$ 9,00 ou 4x de: R$ 2,88'", () => {
+      const expected = 'À Vista: R$ 9,00 ou 4x de: R$ 2,88';
       expect(paymentOptions(10))
         .toBe(expected);
     });
-    it("Se o preço for 80, deve retornar 'À Vista: R$72 ou 4x de: R$23'", () => {
-      const expected = 'À Vista: R$72 ou 4x de: R$23';
+    it("Se o preço for 80, deve retornar 'À Vista: R$ 72,00 ou 4x de: R$ 23,00'", () => {
+      const expected = 'À Vista: R$ 72,00 ou 4x de: R$ 23,00';
       expect(paymentOptions(80))
         .toBe(expected);
     });

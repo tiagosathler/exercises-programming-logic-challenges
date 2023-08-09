@@ -21,7 +21,23 @@ Obs: seguir o mesmo formato de retorno da mensagem de saída.
 */
 
 function paymentOptions(price) {
-  // Desenvolva seu código nessa função
+  const spotPrice = price * 0.9;
+  const termPrice = (price * 1.15) / 4;
+
+  const style = {
+    style: "currency",
+    currency: "BRL",
+  };
+
+  const spotPriceCurrency = new Intl.NumberFormat("pt-BR", style).format(
+    spotPrice
+  );
+
+  const termPriceCurrency = new Intl.NumberFormat("pt-BR", style).format(
+    termPrice
+  );
+
+  return `À Vista: ${spotPriceCurrency} ou 4x de: ${termPriceCurrency}`;
 }
 
 module.exports = paymentOptions;

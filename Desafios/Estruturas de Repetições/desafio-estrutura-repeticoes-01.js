@@ -15,8 +15,12 @@ Saída:
 
 */
 
-function encode(string){
-  // Desenvolva seu código nessa função
+function encode(string) {
+  const array = Array.from(string);
+  for (const index in array) {
+    array[index] = index * 3;
+  }
+  return array.join("");
 }
 
 module.exports = encode;
