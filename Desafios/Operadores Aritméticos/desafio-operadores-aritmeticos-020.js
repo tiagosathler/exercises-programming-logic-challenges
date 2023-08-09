@@ -16,7 +16,9 @@ Retorne uma mensagem no seguinte formato:
 */
 
 function avaliador(score1, score2, score3) {
-  // Desenvolva seu código nessa função
+  const average = Math.round((score1 + score2 + score3) / 3);
+  const result = average >= 6 ? "Aprovação" : "Reprovação";
+  return result + `, média: ${average}`;
 }
 
 module.exports = avaliador;

@@ -19,7 +19,8 @@ Informações:
 */
 
 function carTrip(spBh, bhSal, salNat) {
-  // Desenvolva seu código nessa função
+  const total = (spBh + bhSal + salNat) / 24;
+  return Number(total.toFixed(3));
 }
 
 module.exports = carTrip;

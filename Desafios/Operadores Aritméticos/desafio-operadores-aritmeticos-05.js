@@ -11,8 +11,10 @@ Escreva um algoritmo que calcule a área de um triângulo.
 
 */
 
-function triangleArea(base, height){
-  // Desenvolva seu código nessa função
+function triangleArea(base, height) {
+  return `A área do triângulo de base ${base} e altura ${height} é: ${
+    (base * height) / 2
+  }`;
 }
 
 module.exports = triangleArea;
